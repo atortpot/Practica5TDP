@@ -1,0 +1,18 @@
+@startuml
+start
+:Inicializar tablero 4x4;
+:Establecer ubicación aleatoria del barco;
+repeat
+  :Obtener intento del jugador;
+  if (intento ≠ ubicación barco) then (no)
+    :Marcar intento como agua;
+    :Mostrar tablero;
+  else (sí)
+    -[#green]->[Tocado];
+  endif
+repeat while (intento ≠ ubicación barco)
+:Marcar tocado y hundido;
+:Mostrar tablero;
+:Imprimir "Tocado y hundido - Ha ganado";
+stop
+@enduml

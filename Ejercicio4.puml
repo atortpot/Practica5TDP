@@ -1,0 +1,14 @@
+@startuml
+start
+:Inicializar diccionario de votos;
+:Establecer código especial;
+while (Leer voto del usuario) is (voto ≠ código especial)
+  if (¿Voto existe en diccionario?) then (sí)
+    :Incrementar conteo de votos para este candidato;
+  else (no)
+    :Agregar voto al diccionario con un conteo inicial de 1;
+  endif
+endwhile (voto = código especial)
+:Mostrar resultados de la votación;
+stop
+@enduml

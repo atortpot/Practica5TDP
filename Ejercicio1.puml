@@ -1,0 +1,19 @@
+@startuml
+start
+
+:Empezar contador en 10;
+
+repeat
+    :Imprimir "Cuenta atrás: " + contador;
+    :Disminuir contador en 1;
+    -> [contador > 0] Si;
+repeat while (contador >= 0)
+
+if (contador == 0) then (sí)
+    :Esperar 1 segundo;
+    :Imprimir "Despegue iniciado";
+else (no)
+endif
+
+stop
+@enduml

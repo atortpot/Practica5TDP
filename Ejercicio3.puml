@@ -1,0 +1,18 @@
+@startuml
+start
+:Inicializar lista de calificaciones vacía;
+repeat :Leer nota del estudiante;
+  ->[mientras nota ≠ -1];
+  :Agregar nota a lista de calificaciones;
+repeat while (nota ≠ -1)
+:Calcular total de calificaciones;
+:Contar número de calificaciones;
+if (Número de calificaciones > 0) then (sí)
+  :Calcular media = total / número;
+  :Imprimir lista de calificaciones;
+  :Imprimir media;
+else (no)
+  :Imprimir "No se ingresaron calificaciones";
+endif
+stop
+@enduml

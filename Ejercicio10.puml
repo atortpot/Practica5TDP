@@ -1,0 +1,20 @@
+@startuml
+start
+:Crear tabla hash;
+repeat :Agregar empleado a la tabla hash;
+  ->[Repetir para cada empleado];
+repeat while (¿Agregar más empleados?)
+:Esperar solicitud de búsqueda;
+if (Solicitud de búsqueda recibida) then (sí)
+  :Buscar empleado por nombre, número de empleado o seguridad social;
+  if (Empleado encontrado) then (sí)
+    :Mostrar información del empleado;
+  else (no)
+    :Mostrar mensaje "Empleado no encontrado";
+  endif
+else (no)
+  -[#red]->[Fin];
+endif
+stop
+@enduml
+

@@ -1,0 +1,17 @@
+@startuml
+start
+:Iniciar diccionario de frecuencias;
+repeat
+  :Leer texto del usuario;
+  repeat :Para cada carácter en el texto;
+    -[hidden]->repeat;
+    if (¿Carácter en diccionario?) then (sí)
+      :Aumentar frecuencia del carácter;
+    else (no)
+      :Agregar carácter al diccionario con frecuencia 1;
+    endif
+  backward :Fin para cada carácter;
+repeat while (¿Más texto?)
+:Imprimir frecuencias de caracteres;
+stop
+@enduml

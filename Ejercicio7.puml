@@ -1,0 +1,14 @@
+@startuml
+start
+:Inicializar matriz de 20x30;
+repeat :Para cada fila i de 0 a 19;
+  ->[Para i de 0 a 19];
+  repeat :Para cada columna j de 0 a 29;
+    -[Para j de 0 a 29];
+    :Asignar carácter aleatorio a matriz[i][j];
+    repeat while (j < 30)
+  -[hidden]->repeat;
+repeat while (i < 20)
+:Mostrar matriz;
+stop
+@enduml

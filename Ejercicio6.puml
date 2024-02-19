@@ -1,0 +1,16 @@
+@startuml
+start
+:Inicializar matriz 4x4;
+:Establecer valor inicial en 1;
+repeat :Para cada columna de 0 a 3;
+  ->[Para j de 0 a 3];
+  repeat :Para cada fila de 0 a 3;
+    -[Para i de 0 a 3];
+    :Asignar valor a matriz[i][j];
+    :Incrementar valor;
+    repeat while (i < 4)
+  -[hidden]->repeat;
+repeat while (j < 4)
+:Imprimir matriz;
+stop
+@enduml

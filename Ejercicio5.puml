@@ -1,0 +1,11 @@
+@startuml
+start
+:Leer palabra del usuario;
+:Invertir palabra;
+if (Palabra invertida == Palabra original) then (sí)
+  :Imprimir "La palabra es un palíndromo";
+else (no)
+  :Imprimir "La palabra no es un palíndromo";
+endif
+stop
+@enduml

@@ -1,0 +1,12 @@
+@startuml
+start
+:Inicializar tablero 3x3;
+:Setear jugador actual a 'X';
+while (No hay ganador y no hay empate)
+  :Mostrar tablero;
+  :Realizar movimiento (jugador actual);
+  :Cambiar jugador;
+endwhile (Hay ganador o empate)
+:Mostrar resultado;
+stop
+@enduml
